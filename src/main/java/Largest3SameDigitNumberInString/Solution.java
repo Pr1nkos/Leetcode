@@ -12,9 +12,12 @@ class Solution {
                 count++;
             }
             if (count == 3) {
-                String substring = chars[i] + String.valueOf(chars[i]) + chars[i];
+                StringBuilder substring = new StringBuilder();
+                substring.append(chars[i]);
+                substring.append(chars[i]);
+                substring.append(chars[i]);
                 if (num.contains(substring)) {
-                    return substring;
+                    return substring.toString();
                 }
                 count = 1;
             }
